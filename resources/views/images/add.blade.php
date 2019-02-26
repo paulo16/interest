@@ -2,6 +2,7 @@
 
 @section('head')
     <link rel="stylesheet" href="{{ asset('assets/css/dropify.css') }}"  />
+
 @endsection
 
 @section('content')
@@ -76,7 +77,7 @@
                 <label class="col-sm-3 control-label no-padding-right" for="photo_local_link"> photo </label>
 
                 <div class="col-sm-9">
-                    <input id="photo_local_link" data-default-file="" name="photo_local_link" data-show-errors="true"  type="file" class="dropify" data-max-file-size="2M" />
+                    <input id="photo_local_link" data-default-file="" name="photo_local_link" data-show-errors="true"  type="file"  data-max-file-size="2M" />
 
                     @if ($errors->has('photo_local_link'))
                     <span class="help-block">
@@ -115,9 +116,10 @@
 @endsection
 
 @section('js')
-<script src="{{ asset('assets/js/dropify.min.js') }}" ></script>
+<script src="{{ asset('assets/js/dropify.js') }}" ></script>
 <script type="text/javascript">
     $('.dropify').dropify({
+
         messages: {
             'default': 'Drag and drop a file here or click',
             'replace': 'Drag and drop or click to replace',

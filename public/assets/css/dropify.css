@@ -67,7 +67,7 @@
     border-color: #F34141; }
     .dropify-wrapper.has-error .dropify-message .dropify-error {
       display: block; }
-    .dropify-wrapper.has-error:hover .dropify-errors-container  {
+    .dropify-wrapper.has-error:hover .dropify-errors-container  {
       visibility: visible;
       opacity: 1;
       -webkit-transition-delay: 0s;
