@@ -10,7 +10,10 @@
             <h5 class="card-title">Mes Images </h5>
 
             <div class="text-center">
-              <img src="..." class="rounded" alt="...">
+
+              @if ($image->photo_local_link)
+              <img id="avatar" class="rounded" src="{{Storage::url($image->photo_local_link)}}" alt="Avatar">
+              @endif
           </div>
 
 

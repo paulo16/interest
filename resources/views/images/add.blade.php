@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('head')
+    <link rel="stylesheet" href="{{ asset('assets/css/dropify.css') }}"  />
+@endsection
+
 @section('content')
 <div class="row">
     <div class="col-md-6 offset-md-3">
@@ -72,7 +76,7 @@
                 <label class="col-sm-3 control-label no-padding-right" for="photo_local_link"> photo </label>
 
                 <div class="col-sm-9">
-                    <input id="photo_local_link" name="photo_local_link" data-with="200" type="file" class="dropify" data-max-file-size="2M" />
+                    <input id="photo_local_link" data-default-file="url_of_your_file" name="photo_local_link" data-show-errors="true"  type="file" class="dropify" data-max-file-size="2M" />
 
                     @if ($errors->has('photo_local_link'))
                     <span class="help-block">
@@ -108,5 +112,19 @@
 </div>
 </div>
 
-
 @endsection
+
+@section('js')
+<script src="{{ asset('assets/js/dropify.min.js') }}" ></script>
+<script type="text/javascript">
+    $('.dropify').dropify({
+        messages: {
+            'default': 'Drag and drop a file here or click',
+            'replace': 'Drag and drop or click to replace',
+            'remove':  'Remove',
+            'error':   'Ooops, something wrong happended.'
+        }
+    });
+</script>
+@endsection
+

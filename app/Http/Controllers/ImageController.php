@@ -62,7 +62,8 @@ class ImageController extends Controller
             $image->photo_local_link= $request->file('photo_local_link')->store('public/'.$userid.'/images');
         }
 
-        return $image->save()? $image: null;
+        return $image->save()?  redirect()->route('images.show',$image): 
+        redirect()->route('images.create');
     }
 
     /**

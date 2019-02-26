@@ -17,8 +17,9 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/dropify.min.css') }}" rel="stylesheet">
+     @yield('head')
 </head>
 <body>
     <div id="app">
@@ -78,16 +79,7 @@
     </main>
 </div>
 <script src="{{ asset('assets/js/jquery-3.3.1.js') }}" ></script>
-<script src="{{ asset('assets/js/dropify.min.js') }}" ></script>
-<script type="text/javascript">
-    $('.dropify').dropify({
-        messages: {
-            'default': 'Drag and drop a file here or click',
-            'replace': 'Drag and drop or click to replace',
-            'remove':  'Remove',
-            'error':   'Ooops, something wrong happended.'
-        }
-    });
-</script>
+<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+@yield('js')
 </body>
 </html>
