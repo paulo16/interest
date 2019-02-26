@@ -9,10 +9,10 @@
           <div class="card-body">
             <h5 class="card-title">Mes Images </h5>
 
-            <div class="text-center">
+            <div class="col-md-4 px-0">
 
               @if ($image->photo_local_link)
-              <img id="avatar" class="rounded" src="{{Storage::url($image->photo_local_link)}}" alt="Avatar">
+              <img id="avatar" class="rounded img-fluid" src="{{Storage::url($image->photo_local_link)}}" alt="Avatar">
               @endif
           </div>
 

@@ -76,7 +76,7 @@
                 <label class="col-sm-3 control-label no-padding-right" for="photo_local_link"> photo </label>
 
                 <div class="col-sm-9">
-                    <input id="photo_local_link" data-default-file="url_of_your_file" name="photo_local_link" data-show-errors="true"  type="file" class="dropify" data-max-file-size="2M" />
+                    <input id="photo_local_link" data-default-file="" name="photo_local_link" data-show-errors="true"  type="file" class="dropify" data-max-file-size="2M" />
 
                     @if ($errors->has('photo_local_link'))
                     <span class="help-block">

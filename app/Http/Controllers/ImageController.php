@@ -55,7 +55,8 @@ class ImageController extends Controller
             $album = Album::firstOrNew(['titre' => $request->get('categories') ]);
             $album->user_id = $userid;
             $image->album_id=$album->id ;
-            $image->photo_local_link= $request->file('photo_local_link')->store('public/'.$userid.'/'.$request->get('categories'));
+
+            $album->save() ? $image->photo_local_link= $request->file('photo_local_link')->store('public/'.$userid.'/'.$request->get('categories')):null;
         }
 
         if (!$request->get('categories') && $request->hasFile('photo_local_link')) {
